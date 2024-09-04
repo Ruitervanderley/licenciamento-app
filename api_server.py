@@ -1,8 +1,12 @@
 # api_server.py
 from flask import Flask, request, jsonify
 from datetime import datetime, timedelta
+import os
 
 app = Flask(__name__)
+
+# Acessa a chave secreta da variável de ambiente
+api_secret_key = os.getenv('API_SECRET_KEY', 'default-secret-key')
 
 # Simula uma base de dados de seriais
 seriais_db = {
