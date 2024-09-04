@@ -1,3 +1,4 @@
 Flask==2.1.2
 requests==2.28.1
-Flask-Cors==3.0.10  # Necessário para evitar problemas de CORS
+Flask-Cors==3.0.10
+
