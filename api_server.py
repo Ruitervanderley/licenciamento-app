@@ -30,4 +30,5 @@ def validar_serial():
         return jsonify({"valido": False, "mensagem": "Serial inválido ou não encontrado"})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.getenv("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
